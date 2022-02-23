@@ -17,7 +17,7 @@ rm -f getfcpartners.sh
 location)
 echo Find Locations by Partner
 export partner="'$2'"
-locationsbypartner=$(cat fcpartnersww.txt | jq -r 'select(.Partner=="'$partner'") | [.Region]')
+locationsbypartner=$(cat fcpartnersww.txt | jq -r --arg partner "$partner" 'select(.Partner=="'$partner'") | [.Region]')
 echo $locationsbypartner | jq -r .[]
 ;;
 partner)
