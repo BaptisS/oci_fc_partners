@@ -6,4 +6,4 @@
 
 oci network fast-connect-provider-service list --compartment-id $compocid --all --region $1 --output json --query 'data[].{Partner:"provider-name",Service:"provider-service-name",Type:"type",vlan:"supported-virtual-circuit-types"}' > ocifcpartners_$1
 sed -i 's+]+],"Region":"'$1'"+g' ocifcpartners_$1
-cat ocifcpartners_$1 | jq '.[] | {Partner:."Partner",Service:.Service,Region:.Region,Type:.vlan}' | jq >> fcpartnersww.txt
+cat ocifcpartners_$1 | jq '.[] | {Partner:."Partner",Service:.Service,Region:.Region,Type:.vlan}' >> fcpartnersww.txt &> /dev/null
