@@ -13,6 +13,8 @@ wget https://raw.githubusercontent.com/BaptisS/oci_fc_partners/main/fcpartners.s
 chmod +x fcpartners.sh
 
 ./fcpartners.sh update $compocid
+./fcpartners.sh list
+
 
 
 '''
