@@ -1,6 +1,9 @@
 # oci_fc_partners
 
 '''
+export compocid=<compartment_ocid>
+
+
 
 rm -f fcpartners.sh
 
@@ -8,13 +11,15 @@ wget https://raw.githubusercontent.com/BaptisS/oci_fc_partners/main/fcpartners.s
 
 chmod +x fcpartners.sh
 
-./fcpartners.sh list
+./fcpartners.sh update $compocid
 
 
 '''
 
 
 "Usage : ./fcpartners.sh update 'compartment_ocid'" 
+
+
 
 "Usage : ./fcpartners.sh list"
 
