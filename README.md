@@ -1,6 +1,7 @@
 # oci_fc_partners
 
 '''
+
 export compocid=<compartment_ocid>
 
 
