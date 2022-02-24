@@ -15,9 +15,10 @@ echo "We're currently updating the list of FC Partners available worldwide"
 regions=$(oci iam region list --query 'data[].{name:name}' | jq -r .[].name)
 for region in $regions; do ./getfcpartners.sh $region $2; done
 rm -f getfcpartners.sh
+rm -f ocifcpartners_*
 echo "Usage : ./fcpartners.sh update 'compartment_ocid'" 
 echo "Usage : ./fcpartners.sh partner 'partner_name'"
-echo "Usage : ./fcpartners.sh location 'region_identifier'"  
+echo "Usage : ./fcpartners.sh location 'region_identifier'" 
 ;;
 partner)
 echo FastConnect Partner:"'$2'" is available in the following OCI regions :
