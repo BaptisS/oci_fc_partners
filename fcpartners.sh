@@ -41,7 +41,7 @@ echo $partnersbylocation | jq -r .[] | uniq | sort
 ;;
 list)
 echo "List all FastConnect partners available worldwide"
-partnerslist=$(cat fcpartnersww.txt | jq -r | [.Partner]')
+partnerslist=$(cat fcpartnersww.txt | jq -r | [.Partner])
 echo $partnerslist | jq -r .[] | uniq | sort
 ;;
 *)
